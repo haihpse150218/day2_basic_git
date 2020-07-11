@@ -4,15 +4,15 @@
 
 ## Giới thiệu
 
-[Git](https://en.wikipedia.org/wiki/Git) là công cụ dùng để theo dõi và quản lý những thay đổi của tập tin (files): đây là nguyên tắc cơ bản của [**version control**](https://vimeo.com/41027679) (quản lý phiên bản).
+[Git](http://raboninco.com/1JkvO) là công cụ dùng để theo dõi và quản lý những thay đổi của tập tin (files): đây là nguyên tắc cơ bản của [**version control**](http://raboninco.com/1KHdf) (quản lý phiên bản).
 
 Version control - Quản lý phiên bản là một hệ thống lưu trữ các thay đổi của một file hoặc một nhóm các files theo thời gian, từ đó giúp bạn có thể quay lại một phiên bản xác định nào đó sau này.
 
-Hệ thống này giúp [lưu giữ lịch sử](https://vimeo.com/41381741) của tất cả thay đổi mà bạn thực hiện với các files trong dự án phần mềm và giúp tổ chức, sắp xếp các phiên bản tương ứng cho sản phẩm phần mềm.
+Hệ thống này giúp [lưu giữ lịch sử](http://raboninco.com/1KHe9) của tất cả thay đổi mà bạn thực hiện với các files trong dự án phần mềm và giúp tổ chức, sắp xếp các phiên bản tương ứng cho sản phẩm phần mềm.
 
 ## Software Project Directory (Thư mục dự án phần mềm)
 
-Khi bắt đầu một dự án phát triển phần mềm, nhà phát triển phần mềm thường tạo một thư mục riêng cho dự án (còn gọi là **working directory** - thư mục làm việc), trong đó có các thư mục con dùng để sắp xếp và chứa các tập tin (như [source code](https://en.wikipedia.org/wiki/Source_code) - mã nguồn và các tài nguyên liên quan như hình ảnh, âm thanh, v.v.)
+Khi bắt đầu một dự án phát triển phần mềm, nhà phát triển phần mềm thường tạo một thư mục riêng cho dự án (còn gọi là **working directory** - thư mục làm việc), trong đó có các thư mục con dùng để sắp xếp và chứa các tập tin (như [source code](http://raboninco.com/1KHeM) - mã nguồn và các tài nguyên liên quan như hình ảnh, âm thanh, v.v.)
 
 Ví dụ:
 
@@ -69,7 +69,7 @@ $ mkdir my_whatever_other_amazing_project
 
 ## Git Repository (Kho chứa mã nguồn Git)
 
-[Git](https://git-scm.com/book/en/v2) đi cùng với khái niệm **repository** (kho chứa mã nguồn), hay gọi tắt là **repo**. Đây là thư mục ẩn `.git`, nằm trong **working directory**, là nơi Git lưu trữ các metadata (siêu dữ liệu) và object database (cơ sở dữ liệu đối tượng) cho dự án, ví dụ: internal tracking data (dữ liệu theo dõi nội bộ).
+[Git](http://raboninco.com/1KHfO) đi cùng với khái niệm **repository** (kho chứa mã nguồn), hay gọi tắt là **repo**. Đây là thư mục ẩn `.git`, nằm trong **working directory**, là nơi Git lưu trữ các metadata (siêu dữ liệu) và object database (cơ sở dữ liệu đối tượng) cho dự án, ví dụ: internal tracking data (dữ liệu theo dõi nội bộ).
 
 Git có thể theo dõi toàn bộ các thay đổi mà bạn thực hiện trên các files bất kỳ trong **working directory**. Đây chính là chức năng quan trọng nhất của Git.
 
@@ -87,11 +87,11 @@ $ mkdir my_amazing_project
 $ cd my_amazing_project
 ```
 
-Tiếp theo, chuyển thư mục đó thành một Git repository bằng lệnh [`git init`](https://git-scm.com/docs/git-init). Lệnh này sẽ tạo một thư mục con mới có tên .git, trong đó chứa tất cả các repository files cần thiết.
+Tiếp theo, chuyển thư mục đó thành một Git repository bằng lệnh [`git init`](http://raboninco.com/1KHga). Lệnh này sẽ tạo một thư mục con mới có tên .git, trong đó chứa tất cả các repository files cần thiết.
 
 ```bash
 $ git init
-Initialized empty Git repository in /Home/lythanhphu/Devel/my_amazing_project/.git/
+Initialized empty Git repository in /Home/haitac/Devel/my_amazing_project/.git/
 $ ls -la
 total 0
 drwxr-xr-x   3 lythanhphu  students    96 Jun 10 14:55 .
@@ -102,46 +102,43 @@ Lúc này, vẫn chưa có gì được tracked (theo dõi) trong dự án. Bạ
 
 ### Cloning an Existing Project (nhân bản từ dự án có sẵn)
 
-Nếu muốn nhân bản một Git repository có sẵn, bạn cần nhập lệnh [`git clone`](https://git-scm.com/docs/git-clone) và chỉ đến vị trí mà bạn muốn tạo Git repository mới để clone (nhân bản).
+Nếu muốn nhân bản một Git repository có sẵn, bạn cần nhập lệnh [`git clone`](http://raboninco.com/1KHhB) và chỉ đến vị trí mà bạn muốn tạo Git repository mới để clone (nhân bản).
 
-[Vị trí](https://git-scm.com/docs/git-clone#URLS) của Git repository tương ứng với [Uniform Resource Identifier](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) (Định danh Tài nguyên Thống nhất) giúp xác định máy chủ nơi chứa Git repository, pathname (tên đường dẫn) của repository này và [transfer protocol](https://en.wikipedia.org/wiki/Application_layer) (giao thức truyền thông) (HTTP, HTTPS, SSH, vv...) dùng để tải Git repository này.
+[Vị trí](http://raboninco.com/1KHhd) của Git repository tương ứng với [Uniform Resource Identifier](http://raboninco.com/1KHhu) (Định danh Tài nguyên Thống nhất) giúp xác định máy chủ nơi chứa Git repository, pathname (tên đường dẫn) của repository này và [transfer protocol](http://raboninco.com/1KHiW) (giao thức truyền thông) (HTTP, HTTPS, SSH, vv...) dùng để tải Git repository này.
 
 _Lưu ý: Đừng lo lắng, chúng tôi sẽ cho bạn biết vị trí của Git repository mà bạn cần nhân bản (clone). Bạn chỉ cần chỉ ra vị trí mà bạn muốn chứa bản sao Git repository!_
 
-Ví dụ, hãy clone dự án [Git Sandbox](http://gitlab-students.int.intek.edu.vn/sm/intek-sm-git_sandbox) như sau:
+Ví dụ, hãy clone dự án [Git Sandbox](https://github.com/haihpse150218/git_sanbox.git) như sau:
 
 ```bash
 $ cd ~/Devel
-$ git clone http://gitlab-students.int.intek.edu.vn/sm/intek-sm-git_sandbox.git
-Cloning into 'intek-sm-git_sandbox'...
+$ git clone https://github.com/haihpse150218/git_sanbox.git
+Cloning into 'git_sandbox'...
 remote: Counting objects: 23, done.
 remote: Compressing objects: 100% (19/19), done.
 remote: Total 23 (delta 2), reused 0 (delta 0)
 Unpacking objects: 100% (23/23), done.
-$ cd intek-sm-git_sandbox
+$ cd git_sandbox
 $ ls -la
 total 0
-drwxr-xr-x   3 lythanhphu  students     96 Jun 10 14:55 .
-drwxr-xr-x  76 lythanhphu  students   2432 Jun 10 14:55 ..
-drwxr-xr-x  10 lythanhphu  students    320 Jun 10 14:55 .git
--rw-r--r--   1 lythanhphu  students  24344 Jun 10 14:55 gitub_sandbox_icon.png
--rw-r--r--   1 lythanhphu  students  43926 Jun 10 14:55 sandbox_icon.png
--rw-r--r--   1 lythanhphu  students   4058 Jun 10 14:55 sandbox_icon.svg
+drwxr-xr-x   3 haitac  students     96 Jun 10 14:55 .
+drwxr-xr-x  76 haitac  students   2432 Jun 10 14:55 ..
+drwxr-xr-x  10 haitac  students    320 Jun 10 14:55 .git
 ```
 
-Việc này giúp tạo một thư mục tên `intek-sm-git_sandbox` và một thư mục `.git` nằm trong thư mục `intek-sm-git_sandbox`, đồng thời lấy tất cả dữ liệu cho repository đó và tải về bản sao phiên bản làm việc mới nhất.
+Việc này giúp tạo một thư mục tên `git_sandbox` và một thư mục `.git` nằm trong thư mục `git_sandbox`, đồng thời lấy tất cả dữ liệu cho repository đó và tải về bản sao phiên bản làm việc mới nhất.
 
 ## Identifying Yourself (Định danh)
 
-Vào [lần đầu tiên sử dụng Git](https://vimeo.com/41493906), bạn phải [xác định địa chỉ email và tên của bạn](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup). Địa chỉ email và tên này sẽ được liên kết với các thay đổi mã code - **commits** mà bạn sẽ thực hiện trong từng Git repository của bạn.
+Vào [lần đầu tiên sử dụng Git](http://raboninco.com/1KHoF), bạn phải [xác định địa chỉ email và tên của bạn](http://raboninco.com/1KHok). Địa chỉ email và tên này sẽ được liên kết với các thay đổi mã code - **commits** mà bạn sẽ thực hiện trong từng Git repository của bạn.
 
-Để làm điều này, bạn cần sử dụng lệnh [`git config`](https://git-scm.com/docs/git-config) để thiết lập cho các global variables (biến toàn cục) của Git: `user.name` và `user.email`.
+Để làm điều này, bạn cần sử dụng lệnh [`git config`](http://raboninco.com/1KHp5) để thiết lập cho các global variables (biến toàn cục) của Git: `user.name` và `user.email`.
 
-Ví dụ, tên bạn là Lý Thanh Phú và địa chỉ email của bạn là `lythanhphu@intek.edu.vn`, bạn sẽ thiết lập các biến `user.name` và `user.email` như sau:
+Ví dụ, tên bạn là Hai Tac và địa chỉ email của bạn là `haitac@gmail.com`, bạn sẽ thiết lập các biến `user.name` và `user.email` như sau:
 
 ```bash
-$ git config --global user.name "LÝ Thanh Phú"
-$ git config --global user.email "lythanhphu@intek.edu.vn"
+$ git config --global user.name "Hai Tac"
+$ git config --global user.email "haitac@gmail.com"
 ```
 
 _Lưu ý: Nhớ thay thế tên và địa chỉ email trong ví dụ bằng tên và địa chỉ email của bạn._
@@ -150,9 +147,9 @@ Bạn có thể kiểm tra tên và địa chỉ email đã xác định như sa
 
 ```bash
 $ git config --global user.name
-LÝ Thanh Phú
+Hai Tac
 $ git config --global user.email
-lythanhphu@example.com
+haitac@gmail.com
 ```
 
 ## Starting to Work with Git (Bắt đầu làm việc với Git)
@@ -161,11 +158,11 @@ lythanhphu@example.com
 
 Git không tự động theo dõi toàn bộ các files mới mà bạn thêm vào **working directory**.
 
-Có những files mà bạn muốn Git theo dõi, như [source code](https://en.wikipedia.org/wiki/Source_code), các hình ảnh và dữ liệu sử dụng cho dự án của bạn.
+Có những files mà bạn muốn Git theo dõi, như [source code](http://raboninco.com/1KHeM), các hình ảnh và dữ liệu sử dụng cho dự án của bạn.
 
 Cũng có những files mà bạn không muốn Git theo dõi. Trong phần sau, chúng ta sẽ biết những files đó là gì.
 
-File đầu tiên bạn muốn thêm vào dự án của mình và muốn Git theo dõi là [`README.md`](https://en.wikipedia.org/wiki/README). File này là tài liệu hướng dẫn cho dự án của bạn, được viết bằng một cú pháp định dạng rất đơn giản gọi là [Markdown](https://en.wikipedia.org/wiki/Markdown).
+File đầu tiên bạn muốn thêm vào dự án của mình và muốn Git theo dõi là [`README.md`](http://raboninco.com/1KHsH). File này là tài liệu hướng dẫn cho dự án của bạn, được viết bằng một cú pháp định dạng rất đơn giản gọi là [Markdown](http://raboninco.com/1KHsS).
 
 Ví dụ:
 
@@ -188,7 +185,7 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
-Dùng lệnh [`git add`](https://git-scm.com/docs/git-add) để yêu cầu Git theo dõi file này. Lệnh `git status` cho biết file `README.md` mới đã được thêm vào Git:
+Dùng lệnh [`git add`](http://raboninco.com/1KHtD) để yêu cầu Git theo dõi file này. Lệnh `git status` cho biết file `README.md` mới đã được thêm vào Git:
 
 ```bash
 $ git add README.md
@@ -210,7 +207,7 @@ _Lưu ý: Git không chỉnh sửa các files trong **working directory**, cũng
 
 ### Committing your Change (commit thay đổi)
 
-Để các thay đổi của bạn được lưu vĩnh viễn vào **repository**, bạn phải sử dụng lệnh [`git commit`](https://git-scm.com/docs/git-commit). Lúc này, các thay đổi được xem là đã **commmitted** (cam kết).
+Để các thay đổi của bạn được lưu vĩnh viễn vào **repository**, bạn phải sử dụng lệnh [`git commit`](http://raboninco.com/1KHuQ). Lúc này, các thay đổi được xem là đã **commmitted** (cam kết).
 
 Khi bạn commit một thay đổi, bạn PHẢI luôn đưa ra một **short message** (thông báo ngắn) dưới 50 ký tự để tóm tắt thay đổi của bạn:
 
@@ -229,7 +226,7 @@ Bạn có thể bổ sung các giải thích chi tiết cho commit message (thô
 
 Hàng đầu tiên trong commit message được gọi là **headline** (tiêu đề) hoặc **subject** (chủ đề). Phần còn lại trong commit message được gọi là **body** (nội dung).
 
-Bảy quy tắc của một [Git commit message](https://chris.beams.io/posts/git-commit/) chuẩn:
+Bảy quy tắc của một [Git commit message](http://raboninco.com/1KHvP) chuẩn:
 
 1. Phân cách chủ đề và nội dung bằng một blank line (dòng trống)
 2. Giới hạn chủ đề trong 50 ký tự
@@ -239,8 +236,7 @@ Bảy quy tắc của một [Git commit message](https://chris.beams.io/posts/gi
 6. Gói gọn phần nội dung trong 72 ký tự
 7. Sử dụng phần nội dung để giải thích _what_ (cái gì) và _why_ (tại sao) thay vì giải thích _how_ (như thế nào)
 
-**CHÚ Ý! BẠN PHẢI-LUÔN-LUÔN-TUÂN-THEO CÁC QUY TẮC NÀY ĐỐI VỚI MỖI GIT COMMIT BẠN THỰC HIỆN, NẾU KHÔNG CHÚNG TÔI SẼ KHÔNG CHẤP NHẬN COMMIT CỦA BẠN VÀ BẠN SẼ MẤT XP**
-
+**CHÚ Ý! BẠN PHẢI-LUÔN-LUÔN-TUÂN-THEO CÁC QUY TẮC NÀY ĐỐI VỚI MỖI GIT COMMIT BẠN THỰC HIỆN.
 Để viết một commit message tốt, hãy theo mẫu sau:
 
 ```text
@@ -289,7 +285,7 @@ Dưới đây là Quy trình của một thay đổi:
 
 ![Stage and Commit Files](get_stage_commit_phases.png)
 
-Chính xác thì **staging area** (khu vực đang tổ chức) dùng để làm gì? [Jonathan IRVING](https://twitter.com/sublimegeek) đưa ra [lời giải thích khá rõ ràng](https://dev.to/sublimegeek/git-staging-area-explained-like-im-five-1anh) như sau:
+Chính xác thì **staging area** (khu vực đang tổ chức) dùng để làm gì? [Jonathan IRVING](http://raboninco.com/1KHyj) đưa ra [lời giải thích khá rõ ràng](http://raboninco.com/1KHz1) như sau:
 
 >_Hãy tưởng tượng đến một chiếc hộp. Bạn có thể bỏ đồ vào hộp. Bạn có thể lấy đồ ra khỏi hộp. Chiếc hộp này chính là **staging area** (khu vực đang tổ chức) của Git. Bạn có thể “nháp” các commits vào “hộp”. Committing sẽ giống như việc bạn đóng hộp lại và dán nhãn cho nó._
 
@@ -299,7 +295,7 @@ Là một developer, bạn sẽ liên tục thêm và chỉnh sửa các files h
 
 ### Thêm và chỉnh sửa các tập tin
 
-Hãy thực hành một chút. Hãy chỉnh sửa file `README.md` bằng cách thêm tiêu đề `# Git Basics`, bổ sung 2 files mới là [`CHANGELOG.md`](https://keepachangelog.com/en/1.0.0/) và `VERSION`:
+Hãy thực hành một chút. Hãy chỉnh sửa file `README.md` bằng cách thêm tiêu đề `# Git Basics`, bổ sung 2 files mới là [`CHANGELOG.md`](http://raboninco.com/1KI02) và `VERSION`:
 
 
 ```bash
@@ -354,7 +350,7 @@ Changes to be committed:
 
 ### Phục hồi files đã staged
 
-Nếu bạn quyết định không commit một số thay đổi bạn đã staged, bạn có thể sử dụng lệnh [`git reset`](https://git-scm.com/docs/git-reset) để unstage các thay đổi này. Lệnh này không loại bỏ (undo) các thay đổi bạn đã thực hiện: nó chỉ yêu cầu Git không đưa các thay đổi này vào commit sắp tới, nghĩa là loại bỏ các files tương ứng ra khỏi **staging area** (khu vực đang tổ chức) của Git.
+Nếu bạn quyết định không commit một số thay đổi bạn đã staged, bạn có thể sử dụng lệnh [`git reset`](http://raboninco.com/1KI12) để unstage các thay đổi này. Lệnh này không loại bỏ (undo) các thay đổi bạn đã thực hiện: nó chỉ yêu cầu Git không đưa các thay đổi này vào commit sắp tới, nghĩa là loại bỏ các files tương ứng ra khỏi **staging area** (khu vực đang tổ chức) của Git.
 
 Ví dụ: chúng ta có thể không chắc chắn liệu mình có thực sự cần file `VERSION` trong dự án hay không. Chúng ta không muốn xóa bỏ file này khỏi **woking directory**. Chúng ta chỉ không muốn lưu file này vào **staging area** (khu vực đang tổ chức) nữa: chúng ta muốn Git xóa thay đổi này ra khỏi **staging area**:
 
@@ -396,21 +392,21 @@ Việc tạo các logical commits, hay còn gọi là atomic commits, rất quan
 
 Bao lâu thì bạn phải commit các thay đổi một lần? Không có quy định hay giới hạn cho việc này. Bạn có thể commit theo mức độ thường xuyên mà bạn thấy cần. 
 
-Thông thường, bạn commit các thay đổi khi hoàn thành một feature (1 tính năng hay 1 chức năng đáp ứng một yêu cầu nào đó), sửa [bug](https://en.wikipedia.org/wiki/Software_bug) (lỗi), hoàn thành một [patch](<https://en.wikipedia.org/wiki/Patch_(computing)>) (bản vá), [refactored code](https://en.wikipedia.org/wiki/Code_refactoring) (tái cấu trúc code), viết hướng dẫn sử dụng cho code, v.v.
+Thông thường, bạn commit các thay đổi khi hoàn thành một feature (1 tính năng hay 1 chức năng đáp ứng một yêu cầu nào đó), sửa [bug](http://raboninco.com/1KI2J) (lỗi), hoàn thành một [patch](<https://en.wikipedia.org/wiki/Patch_(computing)>) (bản vá), [refactored code](http://raboninco.com/1KI3I) (tái cấu trúc code), viết hướng dẫn sử dụng cho code, v.v.
 
 Trên thực tế, điều đó có nghĩa bạn phải commit vài lần mỗi giờ.
 
-Cách tốt nhất là bạn luôn commit mã code đang hoạt động hoặc ít nhất là mã code đang được dịch từ [ngôn ngữ nguồn](https://en.wikipedia.org/wiki/Compilation_error). Trong vài tình huống đặc biệt như khi bạn chưa hoàn thành code đang làm nhưng phải rời khỏi máy tính, bạn có thể phải commit code dù nó còn trong tình trạng [work in progress](http://www.ifsq.org/work-in-progress.html) (đang dở dang).
+Cách tốt nhất là bạn luôn commit mã code đang hoạt động hoặc ít nhất là mã code đang được dịch từ [ngôn ngữ nguồn](http://raboninco.com/1KIC6). Trong vài tình huống đặc biệt như khi bạn chưa hoàn thành code đang làm nhưng phải rời khỏi máy tính, bạn có thể phải commit code dù nó còn trong tình trạng [work in progress](http://raboninco.com/1KICR) (đang dở dang).
 
 ## Bỏ qua các files không phải là mã nguồn
 
 Trên thực tế, có một số files trong **working directory** mà bạn không muốn Git theo dõi, không muốn công bố, không cần phải chia sẻ với các developers khác, những người có thể sẽ là người nhân bản Git **repository** của bạn.
 
-Các files này có thể là kết quả của quá trình [compilation process](https://en.wikipedia.org/wiki/Compiler) (chuyển đổi source code thành mã nhị phân, ví dụ như chuyển thành mã [executable code](https://en.wikipedia.org/wiki/Executable) (mã thực thi), [bytecode](https://en.wikipedia.org/wiki/Bytecode), v.v). Các files này có thể là cài đặt cá nhân của bạn về các công cụ [Integrated development environment (IDE)](https://en.wikipedia.org/wiki/Integrated_development_environment) mà bạn sử dụng để viết source code. Các files này có thể là bất kỳ dữ liệu cá nhân nào mà bạn không cần phải chia sẻ với bất cứ ai, nhưng lại cần cho **working directory**.
+Các files này có thể là kết quả của quá trình [compilation process](http://raboninco.com/1KICo) (chuyển đổi source code thành mã nhị phân, ví dụ như chuyển thành mã [executable code](http://raboninco.com/1KID6) (mã thực thi), [bytecode](http://raboninco.com/1KIDQ), v.v). Các files này có thể là cài đặt cá nhân của bạn về các công cụ [Integrated development environment (IDE)](http://raboninco.com/1KIE6) mà bạn sử dụng để viết source code. Các files này có thể là bất kỳ dữ liệu cá nhân nào mà bạn không cần phải chia sẻ với bất cứ ai, nhưng lại cần cho **working directory**.
 
 QUY TẮC: **KHÔNG BAO GIỜ THÊM VÀO GIT REPOSITORY CÁC FILES KHÔNG CẦN THIẾT** CHO VIỆC TIẾP TỤC XÂY DỰNG DỰ ÁN! KHÔNG THÊM VÀO CÁC CÀI ĐẶT CÁ NHÂN, CÁC FILES TẠM HOẶC FILES DO TOOL TỰ ĐỘNG TẠO, NHỮNG FILES MÀ DEVELOPER KHÁC CÓ THỂ TỰ TẠO NẾU CLONE PROJECT CỦA BẠN!
 
-Ví dụ, nếu chúng ta mở dự án với một IDE như [PyCharm](https://www.jetbrains.com/pycharm/), IDE này tạo ra thư mục `.idea` trong **working directory** để lưu trữ một số files về cấu hình:
+Ví dụ, nếu chúng ta mở dự án với một IDE như [PyCharm](http://raboninco.com/1KIEk), IDE này tạo ra thư mục `.idea` trong **working directory** để lưu trữ một số files về cấu hình:
 
 ```text
 .
@@ -442,9 +438,9 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
-Điều này khá là phiền phức, vì Git sẽ tiếp tục thông báo cho chúng ta về thay đổi này, trong khi chúng ta sẽ không bao giờ stage và commit chúng. Tuy nhiên, chúng ta không muốn xóa thư mục `.idea` và các files của nó khỏi **working directory** vì IDE cần chúng. Chúng ta chỉ muốn Git ignore (bỏ qua) chúng. Đây chính là công việc của file [`.gitignore`](https://git-scm.com/docs/gitignore).
+Điều này khá là phiền phức, vì Git sẽ tiếp tục thông báo cho chúng ta về thay đổi này, trong khi chúng ta sẽ không bao giờ stage và commit chúng. Tuy nhiên, chúng ta không muốn xóa thư mục `.idea` và các files của nó khỏi **working directory** vì IDE cần chúng. Chúng ta chỉ muốn Git ignore (bỏ qua) chúng. Đây chính là công việc của file [`.gitignore`](http://raboninco.com/1KIFO).
 
-File `.gitignore` giúp xác định các files chúng ta không muốn theo dõi và muốn [Git bỏ qua](https://www.atlassian.com/git/tutorials/saving-changes/gitignore). Chúng ta chỉ cần tạo một file `.gitignore` trong thư mục gốc của **working directory** và bổ sung đường dẫn của các files mà chúng ta muốn bỏ qua.
+File `.gitignore` giúp xác định các files chúng ta không muốn theo dõi và muốn [Git bỏ qua](http://raboninco.com/1KIFx). Chúng ta chỉ cần tạo một file `.gitignore` trong thư mục gốc của **working directory** và bổ sung đường dẫn của các files mà chúng ta muốn bỏ qua.
 
 ```bash
 # Make sure we are in the root directory of our project's working
@@ -477,13 +473,13 @@ $ git commit -m "Ignore Intellij IDE project settings directory"
  create mode 100644 .gitignore
 ```
 
-_Lưu ý: Bạn có thể quy định các mẫu [global Git ignore](https://www.atlassian.com/git/tutorials/saving-changes/gitignore#global-git-ignore-rules) cho toàn bộ repositories trên hệ thống cục bộ của bạn, nhưng cần cẩn thận với các mẫu bạn chọn, vì các loại files khác nhau sẽ liên quan đến nhiều dự án khác nhau._
+_Lưu ý: Bạn có thể quy định các mẫu [global Git ignore](http://raboninco.com/1KIGp) cho toàn bộ repositories trên hệ thống cục bộ của bạn, nhưng cần cẩn thận với các mẫu bạn chọn, vì các loại files khác nhau sẽ liên quan đến nhiều dự án khác nhau._
 
 ## Submitting Changes Remotely (commit thay đổi từ xa)
 
 Khi bạn **stage** các thay đổi và **commit** chúng, Git đưa các thay đổi đó vào **repository** cục bộ (local repository) trên máy tính của bạn.
 
-Git là một [distributed version control system](https://en.wikipedia.org/wiki/Distributed_version_control) (hệ thống quản lý phiên bản phân tán). Mỗi developer đều cần có một bản sao làm việc và lịch sử đầy đủ, kịp thời của các thay đổi. Vì thế, Git cũng cần đến repo “từ xa”, [remote repositories](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) (không nằm trên máy tính của bạn), chứa các phiên bản của dự án được lưu trữ trên Internet.
+Git là một [distributed version control system](http://raboninco.com/1KIHE) (hệ thống quản lý phiên bản phân tán). Mỗi developer đều cần có một bản sao làm việc và lịch sử đầy đủ, kịp thời của các thay đổi. Vì thế, Git cũng cần đến repo “từ xa”, [remote repositories](http://raboninco.com/1KIHe) (không nằm trên máy tính của bạn), chứa các phiên bản của dự án được lưu trữ trên Internet.
 
 ![Git Local and Remote Repositories](git_local_and_remote_repositories.png)
 
@@ -491,7 +487,7 @@ Bạn cần phải **push** (đẩy) các thay đổi bạn đã **committed** �
 
 Tại sao chúng ta không commit trực tiếp các thay đổi với remote repository thay vì commit chúng với local repository? Một trong những lý do đơn giản là có những lúc bạn không thể kết nối với Internet, ví dụ như khi trên máy bay, nhưng bạn vẫn cần làm việc và cần commit các thay đổi. Bạn luôn có thể làm việc với local repository và khi muốn chia sẻ các commits mới nhất với các developers khác, bạn chỉ cần push chúng vào remote repository.
 
-Để push các commits mới nhất vào remote repository, mặc định đó là remote repository mà bạn đã dùng để cloned cho dự án của mình, hãy sử dụng lệnh [`git push`](https://git-scm.com/docs/git-push).
+Để push các commits mới nhất vào remote repository, mặc định đó là remote repository mà bạn đã dùng để cloned cho dự án của mình, hãy sử dụng lệnh [`git push`](http://raboninco.com/1KIJJ).
 
 ```bash
 $ git push
@@ -501,14 +497,14 @@ Delta compression using up to 4 threads
 Compressing objects: 100% (5/5), done.
 Writing objects: 100% (9/9), 818 bytes | 409.00 KiB/s, done.
 Total 9 (delta 0), reused 0 (delta 0)
-To http://gitlab-students.int.intek.edu.vn/sm/intek-sm-git_sandbox.git
+To https://github.com/haihpse150218/git_sanbox.git
  * [new branch]      master -> master
 ```
 Thế là xong! Lệnh `git push` đã chuyển các commits mới nhất từ local repository đến remote repository.
 
 ## Syncing with Remote Changes (Đồng bộ hóa từ xa)
 
-Các developers khác có thể cùng làm việc trên dự án của bạn và push các thay đổi mới vào remote repository. Bạn cần đồng bộ hóa các thay đổi của họ vào local repository để làm việc trên phiên bản mới nhất thuộc dự án của mình. Để tải về tất cả thay đổi đã được pushed vào remote repository, hãy sử dụng lệnh [`git pull`](https://git-scm.com/docs/git-pull).
+Các developers khác có thể cùng làm việc trên dự án của bạn và push các thay đổi mới vào remote repository. Bạn cần đồng bộ hóa các thay đổi của họ vào local repository để làm việc trên phiên bản mới nhất thuộc dự án của mình. Để tải về tất cả thay đổi đã được pushed vào remote repository, hãy sử dụng lệnh [`git pull`](http://raboninco.com/1KINB).
 
 Ví dụ:
 
@@ -518,7 +514,7 @@ remote: Counting objects: 3, done.
 remote: Compressing objects: 100% (3/3), done.
 remote: Total 3 (delta 0), reused 0 (delta 0)
 Unpacking objects: 100% (3/3), done.
-From http://gitlab-students.int.intek.edu.vn/sm/intek-sm-git_sandbox
+From https://github.com/haihpse150218/git_sanbox.git
    ee9e2ab..0abeeac  master     -> origin/master
 Updating ee9e2ab..0abeeac
 Fast-forward
